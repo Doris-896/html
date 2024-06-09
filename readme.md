@@ -81,5 +81,5 @@
     flex-shrink: <number>: co kích thước của main size lại
 
     flex-flow: = flex-wrap, flex-direction
-    flex: <number> = flex-basic, flex-grow, flex-shrink
+    flex: <number> = 1 thì sẽ chiếm hết chiều rộng của hàng đó
     order : <number>: quyết định hiển thị thằng nào trước, thằng nào sau

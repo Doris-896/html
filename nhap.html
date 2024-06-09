@@ -1,0 +1,110 @@
+<!DOCTYPE html>                                                         
+    <img>                                                                  
+        <head>
+            <title>2024 Met Gala</title>         
+            <meta charset="utf--8">                                         <!--hỗ trợ web viết tiếng việt-->
+            <style>
+                .header {
+                    width: 100%;
+                    height: 100px;
+                    background-color: rgb(238, 144, 191);
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                }
+
+                /*background-image, background-size, background-origin, background-position, background-repeat */
+                .heading {
+                    width: 100%;
+                    height: 100vh;
+                    background-image: linear-gradient(180deg, rgba(255, 174, 174, 0.5), rgb(110, 255, 245, 0.5)), url(https://i.pinimg.com/564x/e2/9e/09/e29e09422ac9102e397f79e397835877.jpg);
+                    /* background-image: url(https://i.pinimg.com/564x/e2/9e/09/e29e09422ac9102e397f79e397835877.jpg); */
+                    /* background-image: linear-gradient(180deg, pink, rgb(110, 255, 245)); */
+                    background-size: 100%;
+                    background-origin:padding-box;
+                    background-position: top 10px left 10px;
+                    background-repeat: no-repeat;                          /* hoặc repeat-x, repeat-y */
+                }
+
+                /* box-sizing: border-box */
+                .box {
+                    width: calc(120px - 20px);                  /* 120px * 2, 120px / 2, 80* + 20px */
+                    height: 80px;
+                    display: inline-flex;
+                    align-items: center;                                 
+                    justify-content: center;
+                    padding: 5px;
+                    border: 5px solid black;
+                    box-sizing: border-box
+                }
+                .box1 {
+                    background-color: aquamarine;
+                    margin: 10px;
+                }
+                .box2 {
+                    background-color: pink; 
+                    padding: 10px;
+                }
+                .box3 {
+                    background-color: rgb(255, 255, 124); 
+                    border-width: 10px;
+                    border-style: solid; 
+                    margin-left: 20px;
+                    border: 10px solid; 
+                    border-color: black;
+                }
+
+                /* Position: absolute */
+                .shape {
+                   width: 100%;
+                   height: 200px;
+                   background-color: pink;
+                   position: relative;
+                }
+                .shape-child {
+                    /* width: 50px;                             xóa height, width đi thì shape-child sẽ chiếm, đè lên toàn bộ thằng shape, chạm 4 hướng bằng 0
+                    height: 50px; */
+                    background-color: #fdf3c480;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                }
+                
+                /* Position: relative, top và left bên dưới chỉ hoạt động nếu có position */
+                h1 {
+                    position: relative;                              
+                    top: 10px;
+                    left: 20px;
+                }
+
+                /* attr(): attribute => Sử dụng lớp giả */
+                a::after {
+                    content: "(" attr(href) ")";
+                }
+            </style>
+        </head>
+        <br>
+            <div class='header'></div>
+            <div class='heading'></div>
+            <div class='box box1'>Box 1 nè các bảnh ưi</div>
+            <div class='box box2'>Box 2 nè các bảnh ưi</div>
+            <div class='box box3'>Box 3 nè các bảnh ưi</div>
+            <div class='shape'>
+                <div class='shape-child'></div>
+            </div>
+            <h1>Gigi Hadid’s 2024 Met Gala Look Took Over 13,500 Hours to Create</h1>
+            <p>If there’s one thing about Gigi Hadid, she knows how to nail a theme, and the 2024 Met Gala was no exception. </p>
+            <img src='https://i.pinimg.com/564x/40/4b/13/404b13206d1736893912b7562ede5b6a.jpg' alt='ảnh model'>
+            </br>
+            <a href="https://www.facebook.com/">Link facbook</a>
+            <ul>
+                <li>Details of Hadid’s dress Mimi Cuttrell</li>
+                <li>Courtesy of Thom Browne</li>
+            </ul>
+            
+        </body>
+    </html>
+    

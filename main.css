@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #ccc;
+}
+
+/* Navbar */
+.nav {
+    min-height: 42px;
+    background-color: rgb(201, 115, 129);
+    display: flex;                          /*cùng nằm trên 1 hàng*/
+    justify-content: space-between;         /*flex-end. center*/
+}
+
+.nav-list {
+    padding-left: 0;
+    margin: auto 16px;
+}
+
+.nav-item {
+    color: wheat;
+    list-style: none;
+    margin: 0 8px; 
+    display: inline-block;
+}
+
+/*Form layout*/
+.form-container {
+    max-width: 720px;
+    padding: 32px;
+    margin: 36px auto 0 auto;
+    background-color: white;
+}
+
+.form__row {
+    padding: 8px 0;
+    display: flex;
+}
+
+.form__label {
+    min-width: 90px;
+}
+
+.form__input {
+    flex: 1;
+}
+
+/*Colum layout*/
+.colum-layout {
+    margin-top: 0;
+}
