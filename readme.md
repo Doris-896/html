@@ -83,3 +83,16 @@
     flex-flow: = flex-wrap, flex-direction
     flex: <number> = 1 thì sẽ chiếm hết chiều rộng của hàng đó
     order : <number>: quyết định hiển thị thằng nào trước, thằng nào sau
+
+10. BEM
+Block element modifier: Tiêu chuẩn đặt tên class trong CSS
+Ứng dụng
+Xây dựng layout website, thành phần trên website
+Dự án nhiều member/ nhiều page/ nhiều thành phần giao diện
+Ưu điểm: rõ ràng, tính module, không lo CSS class này ảnh hưởng CSS class khác
+Nhược điểm: tên class dài
+Cú pháp
+.block
+.block__element
+.block–modifier
+.block__element–modifier
