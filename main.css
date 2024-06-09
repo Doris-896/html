@@ -16,7 +16,7 @@ body {
 /* Navbar */
 .nav {
     min-height: 42px;
-    background-color: rgb(201, 115, 129);
+    background-color: rgb(127, 9, 33);
     display: flex;                          /*cùng nằm trên 1 hàng*/
     justify-content: space-between;         /*flex-end. center*/
 }
@@ -27,7 +27,7 @@ body {
 }
 
 .nav-item {
-    color: wheat;
+    color: rgb(250, 244, 233);
     list-style: none;
     margin: 0 8px; 
     display: inline-block;
@@ -37,7 +37,7 @@ body {
 .form-container {
     max-width: 720px;
     padding: 32px;
-    margin: 36px auto 0 auto;
+    margin: 30px auto 0 auto;
     background-color: white;
 }
 
@@ -55,6 +55,151 @@ body {
 }
 
 /*Colum layout*/
-.colum-layout {
-    margin-top: 0;
+.column-layout {
+    margin-top: 30px;
+    padding: 5px 5px;
+    background-color: #fff;
+    display: flex;
+}
+
+.column-item {
+    padding: 0 16px;
+}
+
+.sidebar-one {
+    flex: 1;
+}
+
+.sidebar-two {
+    flex: 1;
+}
+
+.main-column {
+    flex: 2;
+}
+
+/* Feature layout */
+.feature-layout {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.feature-item {
+    padding: 12px 16px;
+    margin-top: 16px;
+    flex-basis: 30%;
+}
+
+.feature-item:nth-child(1) {
+    background-color: rgb(255, 254, 228);
+}
+
+.feature-item:nth-child(2) {
+    background-color: rgb(238, 229, 179);
+}
+
+.feature-item:nth-child(3) {
+    background-color: rgb(241, 236, 135);
+}
+
+/* Wrap layout */
+.wrap-layout {
+    background-color: #fff;
+    margin-top: 30px;
+    padding: 20px 0 20px 0;
+    display: flex;
+    justify-content: space-around;                          /*chia đều khoảng cách*/
+    flex-wrap: wrap-reverse;
+}
+
+.wrap-layout__item {
+    width: 148px;
+    height: 90px;
+    background-color: rgb(127, 9, 33);
+    color: #fff;
+    text-align: center;
+    line-height: 90px;
+    font-size: 48px;
+    font-weight:700;
+}
+
+.center-layout {
+    background-color: beige;
+    margin: 30px auto 0 auto;
+    padding: 32px 0;
+    max-width: 720px;
+    height: 300px;
+    display: flex;
+}
+
+.center-layout__item {
+    font-size: 50px;
+    font-weight: 700px;
+    margin: auto                    /*cặp vs display: flex, nếu không cần justify-content: center, align-item: center*/
+}
+
+/* Chart layout */
+.chart-layout {
+    margin: 30px auto 0 auto;
+    padding: 20px 0;
+    height: 250px;
+    background-color: beige;
+    display: flex;
+    justify-content: space-around;
+}
+
+.chart-layout__item {
+    width: 60px;
+    background-color: rgb(127, 9, 33);
+    color: #fff;
+    text-align: center;
+    align-self: flex-end;
+    animation: growth ease-in 2s;
+}
+
+@keyframes growth {
+    from {
+        opacity: 0.5;
+        height: calc(var(--percent) - 50%);
+    }
+    to {
+        opacity: 1;
+        height: var(--percent);
+    }
+}
+
+/* Final */
+.the-final {
+    margin: 12px auto 48px auto;
+    padding: 32px 0;
+    max-width: 740px;
+    min-height: 360px;
+    display: flex;
+    flex-direction: row;
+}
+
+.the-final__first {
+    padding: 4px 16px;
+    background-color: #fff;
+    flex: 1;
+}
+
+.the-final__second {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.the-final__second-one {
+    flex: 1;
+    padding: 4px 16px;
+    background-color:beige;
+}
+
+.the-final__second-two {
+    flex: 1;
+    padding: 4px 16px;
+    background-color: bisque;
 }
