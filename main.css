@@ -47,7 +47,7 @@ body {
 }
 
 .form__label {
-    min-width: 90px;
+    min-width: 90px;        /*độ dài của name, password bằng nhau*/
 }
 
 .form__input {
@@ -89,7 +89,7 @@ body {
 .feature-item {
     padding: 12px 16px;
     margin-top: 16px;
-    flex-basis: 30%;
+    flex-basis: 30%;                       /*3 ông, mỗi ông 30%, 10% làm lề*/
 }
 
 .feature-item:nth-child(1) {
