@@ -7,4 +7,12 @@
 body {
     height: 100vh;
     display: flex;
+    font-family: 'Helvetica Neue';
 }
+
+body > div {
+    margin: auto;
+}
+
+/*Block*/
+.btn {}
