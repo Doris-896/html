@@ -1,26 +1,22 @@
-!DOCTYPE html>
+<!-- Button
+Enabled: pointer, hover effect
+Disabled: arrow, no effect  -->
+
+<!DOCTYPE html>
 <html lang="'en">
   <head>
     <meta charset="utf--8" />
     <title>BEM_button</title>
-    <link rel="stylesheet" href="bem/button.css" />
+    <link rel="stylesheet" href="./button.css" />
   </head>
 
   <body>
     <div>
-        <div class="btn btn--success btn--size-s">Success</div>
-        <div class="btn btn-danger btn--size-s">Danger</div>
-    </div>
-    
-    <div>
-        <div class="btn btn--succcess" disabled>Success</div>
-        <div class="btn btn-danger">Danger</div>
-    </div>
-    
-    <div>
-        <div class="btn btn--success btn-size-l">Success</div>
-        <div class="btn btn--danger btn--size-l">Danger</div>
+      <button class="btn btn--sucess btn--disabled">DISABLED</button>      <!--một khi bị disable thì không bấm vào được nữa-->
+      <button class="btn btn--sucess">NORMAL</button>    
+      <button class="btn btn--warn btn--size-s">SIZE S</button>   
+      <button class="btn btn--danger btn--size-l">SIZE L</button>     
     </div>
   </body>
-
+</html>
 

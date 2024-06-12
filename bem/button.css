@@ -15,4 +15,50 @@ body > div {
 }
 
 /*Block*/
-.btn {}
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    min-width: 130px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 12px 48px;
+    border-radius: 50px;
+    cursor: pointer;          /*hover sẽ hiện trỏ chuột*/
+    transition: opacity 0.2s ease;
+}
+
+.btn:hover {
+    opacity: 0.8;             /*khi hover thì mờ đi 1 xíu*/
+}
+
+.btn + .btn {                 /*2 thằng padding cạnh nhau, thằng đằng sau sẽ nhận thuộc tính*/
+    margin-left: 18px;
+}
+
+.btn--sucess {
+    background-color: #71be34;
+}
+
+.btn--warn {
+    background-color: #ffb702;
+}
+
+.btn--danger {
+    background-color: #ff623d;
+}
+
+.btn--disabled {
+    opacity: 0.5 !important;    /*viết như này thì lúc hover không bị đổi màu*/
+    background-color: gray;
+    cursor: default;            /*lúc hover không có hiệu ứng bàn tay*/
+}
+
+.btn--size-l {
+    padding: 20px 60px;
+}
+
+.btn--size-s {
+    padding: 5px 30px;
+}

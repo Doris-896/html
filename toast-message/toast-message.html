@@ -1,0 +1,94 @@
+<!-- Reference
+1. https://cdnjs.com/libraries/font-awesome
+2. https://fontawesome.com/icons -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf--8" />
+    <title>Toast message</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./toast-message.css" />
+  </head>
+
+  <body>
+    <div id="toast">
+      <!-- Success -->
+      <div class="toast toast__success">
+        <div class="toast__icon">
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+
+        <div class="toast__body">
+          <h3 class="toast__title">Success</h3>
+          <p class="toast__mesage">
+            Lê Thúy Hạnh quyết tâm bán hết 1 tỷ gói DHC
+          </p>
+        </div>
+
+        <div class="toast__close">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+      </div>
+
+      <!-- Info -->
+      <div class="toast toast__info">
+        <div class="toast__icon">
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+
+        <div class="toast__body">
+          <h3 class="toast__title">Info</h3>
+          <p class="toast__mesage">Quyết tâm bán hết 1 tỷ gói DHC</p>
+        </div>
+
+        <div class="toast__close">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+      </div>
+
+      <!-- Warning -->
+      <div class="toast toast__warning">
+        <div class="toast__icon">
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+
+        <div class="toast__body">
+          <h3 class="toast__title">Warning</h3>
+          <p class="toast__mesage">Lê Thúy Hạnh</p>
+        </div>
+
+        <div class="toast__close">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+      </div>
+
+      <!-- Error -->
+      <div class="toast toast__error">
+        <div class="toast__icon">
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+
+        <div class="toast__body">
+          <h3 class="toast__title">Error</h3>
+          <p class="toast__mesage">
+            Lê Thúy Hạnh quyết tâm bán hết 1 tỷ gói DHC ở Việt Nam
+          </p>
+        </div>
+
+        <div class="toast__close">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="bn btn--success">Show success toast</div>
+    <div class="bn btn--error">Show error toast</div>
+  </body>
+</html>
