@@ -35,7 +35,7 @@ body > div {
   max-width: 400px;
   border-left: 4px solid;
   box-shadow: 0 0.5px 8px rgba(0, 0, 0, 0.08);
-  animation: slideInLeft ease 0.3s, fadeOut linear 1s 3s forwards;       /*delay 3s, mờ trong 1s, forward: dừng ở điểm cuối của animation*/
+  transition: all linear 0.3s;
 }
 
 @keyframes slideInLeft {

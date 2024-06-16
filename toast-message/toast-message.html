@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf--8" />
+    <meta charset="utf-8" />
     <title>Toast message</title>
     <link
       rel="stylesheet"
@@ -18,92 +18,154 @@
   </head>
 
   <body>
-    <div id="toast">
-      <!-- Success -->
-      <div class="toast toast__success">
-        <div class="toast__icon">
-          <i class="fa-solid fa-circle-check"></i>
-        </div>
-
-        <div class="toast__body">
-          <h3 class="toast__title">Success</h3>
-          <p class="toast__mesage">
-            Lê Thúy Hạnh quyết tâm bán hết 1 tỷ gói DHC
-          </p>
-        </div>
-
-        <div class="toast__close">
-          <i class="fa-solid fa-xmark"></i>
-        </div>
-      </div>
-
-      <!-- Info -->
-      <div class="toast toast__info">
-        <div class="toast__icon">
-          <i class="fa-solid fa-circle-check"></i>
-        </div>
-
-        <div class="toast__body">
-          <h3 class="toast__title">Info</h3>
-          <p class="toast__mesage">Quyết tâm bán hết 1 tỷ gói DHC</p>
-        </div>
-
-        <div class="toast__close">
-          <i class="fa-solid fa-xmark"></i>
-        </div>
-      </div>
-
-      <!-- Warning -->
-      <div class="toast toast__warning">
-        <div class="toast__icon">
-          <i class="fa-solid fa-circle-check"></i>
-        </div>
-
-        <div class="toast__body">
-          <h3 class="toast__title">Warning</h3>
-          <p class="toast__mesage">Lê Thúy Hạnh</p>
-        </div>
-
-        <div class="toast__close">
-          <i class="fa-solid fa-xmark"></i>
-        </div>
-      </div>
-
-      <!-- Error -->
-      <div class="toast toast__error">
-        <div class="toast__icon">
-          <i class="fa-solid fa-circle-check"></i>
-        </div>
-
-        <div class="toast__body">
-          <h3 class="toast__title">Error</h3>
-          <p class="toast__mesage">
-            Lê Thúy Hạnh quyết tâm bán hết 1 tỷ gói DHC ở Việt Nam
-          </p>
-        </div>
-
-        <div class="toast__close">
-          <i class="fa-solid fa-xmark"></i>
-        </div>
-      </div>
-    </div>
+    <div id="toast"></div>
 
     <div>
-      <div class="bn btn--success">Show success toast</div>
-      <div class="bn btn--error">Show error toast</div>
+      <div onclick="showSuccessToast();" class="btn btn--success">Show success toast</div>
+      <div onclick="showErrorToast();" class="btn btn--error">Show error toast</div>
     </div>
 
-    <script>
-        function toast() {
+    <!-- Success
+    <div class="toast toast__success">
+      <div class="toast__icon">
+        <i class="fa-solid fa-circle-check"></i>
+      </div>
 
+      <div class="toast__body">
+        <h3 class="toast__title">Success</h3>
+        <p class="toast__message">Lê Thúy Hạnh quyết tâm bán hết 1 tỷ gói DHC</p>
+      </div>
+
+      <div class="toast__close">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+    </div> -->
+
+    <!-- Info 
+    <div class="toast toast__info">
+      <div class="toast__icon">
+        <i class="fa-solid fa-circle-check"></i>
+      </div>
+
+      <div class="toast__body">
+        <h3 class="toast__title">Info</h3>
+        <p class="toast__message">Quyết tâm bán hết 1 tỷ gói DHC</p>
+      </div>
+
+      <div class="toast__close">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+    </div> -->
+
+    <!-- Warning
+    <div class="toast toast__warning">
+      <div class="toast__icon">
+        <i class="fa-solid fa-circle-check"></i>
+      </div>
+
+      <div class="toast__body">
+        <h3 class="toast__title">Warning</h3>
+        <p class="toast__message">Lê Thúy Hạnh</p>
+      </div>
+
+      <div class="toast__close">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+    </div> -->
+
+    <!-- Error 
+    <div class="toast toast__error">
+      <div class="toast__icon">
+        <i class="fa-solid fa-circle-check"></i>
+      </div>
+
+      <div class="toast__body">
+        <h3 class="toast__title">Error</h3>
+        <p class="toast__message">
+          Lê Thúy Hạnh quyết tâm bán hết 1 tỷ gói DHC ở Việt Nam
+        </p>
+      </div>
+
+      <div class="toast__close">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+    </div> -->
+
+    <script>
+      //Toast function
+        function toast({
+          title = '',
+          message = '',
+          type = 'info',
+          duration = 3000
+        }) {
+          const main = document.getElementById('toast');
+          
+          if (main) {
+            const toast = document.createElement('div');
+
+            toast.onclick = function() {
+
+            }
+            
+            const icons = {
+                success: 'fa-solid fa-circle-check',
+                info: 'fa-solid fa-circle-check',
+                warning: 'fa-solid fa-circle-check',
+                error: 'fa-solid fa-circle-check'
+            };
+
+            const icon = icons[type];
+            const delay = (duration / 1000).toFixed(2) 
+
+            toast.classList.add('toast', `toast--${type}`);
+            toast.style.animation = 'slideInLeft ease 0.3s, fadeOut linear 1s 3s forwards;'         /*delay 3s, mờ trong 1s, forward: dừng ở điểm cuối của animation*/
+            toast.innerHTML = `
+              <div class="toast__icon">
+                <i class='${icon}'></i>
+              </div>
+
+              <div class="toast__body">
+                <h3 class="toast__title">${title}</h3>
+                <p class="toast__message">${message}</p>
+              </div>
+
+              <div class="toast__close">
+                <i class="fa-solid fa-xmark"></i>
+              </div>`
+            ;
+
+            main.appendChild(toast);
+
+            setTimeout(function() {
+              main.removeChild(toast)
+            }, duration + 1000)
+          }
         }
-        toast(
-            title: 'Success',
+
+        // toast({
+        //     title: 'Thành công!',
+        //     message: 'Lê Thúy Hạnh quyết tâm bán hết 1 tỷ gói DHC ở Việt Nam'
+        //     type:'success',
+        //     duration: 3000
+        // })
+
+        function showSuccessToast() {
+          toast({
+            title: 'Thành công!',
             message: 'Lê Thúy Hạnh quyết tâm bán hết 1 tỷ gói DHC ở Việt Nam'
             type:'success',
-            duration: 3000
-        ):void
+            duration: 5000
+        })
+        }
+        function showErrorToast() {
+          toast({
+            title: 'Thất bại!',
+            message: 'Chị Dung không kịp gửi hàng về Việt Nam'
+            type:'error',
+            duration: 5000
+        })
+        }
     </script>
-
   </body>
 </html>
