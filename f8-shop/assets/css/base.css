@@ -1,0 +1,31 @@
+:root {                                     /*nơi khai báo biến css*/
+    --white-color: #fff;
+    --back-color: #000;
+    --text-color: #333;
+}
+
+* {                                         /*apply thuộc tính css lên tất cả các phần tử html được nhúng file base.css*/
+    box-sizing: inherit;                    /*kế thừa thằng box-sizing: border-box của html bên dưới*/
+}
+
+html {
+    font-size: 62.5%;                       /*tương ứng với 10px, vì 100% ứng với 16px*/
+    line-height: 1.6rem;                    /*vì ở trên 62% ứng 10px nên muốn 16px thì viết 1.6 rem*/
+    font-family: "Roboto", sans-serif;      /*khi font roboto bị lỗi/ chưa tải được thì sẽ dùng tạm 1 font sans-serif*/
+    box-sizing: border-box;
+}
+
+.grid {                                     /*với màn hình kích thước lớn hơn 1200 thì kích thước tối đa của class grid chỉ là 1200 thôi, còn case nhỏ hơn 1200 thì đúng bằng kích thước thật*/
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.gỉd__full-width {                          /*Trong TH không muốn dùng width là 1200px*/
+    width: 100%
+}
+
+.grid__row {                                /*những thẻ trong class nằm cùng trên hàng ngang, tổng độ dài vượt quá row thì sẽ bị nhảy xuống hàng dưới*/
+    display: flex;
+    flex-wrap: wrap;
+}
